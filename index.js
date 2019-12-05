@@ -30,7 +30,7 @@ firebase.initializeApp(firebaseConfig);
 
 
 app.use(bodyParser.json({limit: '100mb'}));
-    
+
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
@@ -180,4 +180,4 @@ app.get('/videos/:video_id/users/emotions', function(req, res){
       });
 });
 
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
